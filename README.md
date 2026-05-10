@@ -50,39 +50,6 @@ Usando VIVADO.
 
 ![image.png](./images/image.png)
 
-## Instrucoes suportadas
-
-R-type:
-
-- `add`
-- `sub`
-- `and`
-- `or`
-- `xor`
-- `slt`
-
-I-type:
-
-- `addi`
-- `andi`
-- `ori`
-- `xori`
-- `slti`
-
-Load/store:
-
-- `lw`
-- `sw`
-
-U-type:
-
-- `lui`
-
-Branch/jump:
-
-- `beq`
-- `bne`
-- `jal`
 
 ## Programa de teste
 
