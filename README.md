@@ -48,7 +48,7 @@ Usando VIVADO.
 
 [schematic.pdf](./docs/schematic.pdf)
 
-![image.png](./images/./images/image.png)
+![image.png](./images/image.png)
 
 ## Instrucoes suportadas
 
@@ -111,7 +111,7 @@ Esse programa calcula operacoes com A = 28 e B = 26, grava o resultado da soma n
 
 Seguindo exatamente conforme o definido pelo projeto
 
-![image.png](./images/./images/image%201.png)
+![image.png](./images/image%201.png)
 
 ## Execução da simulação
 
@@ -133,7 +133,7 @@ Durante o `beq`, `branch_taken` deve ficar em 1. Durante o `jal`, `jump` deve fi
 
 # Simulação
 
-![image.png](./images/./images/image%202.png)
+![image.png](./images/image%202.png)
 
 ## Instruções
 
@@ -280,7 +280,7 @@ end
 
 PC depois prepara para próxima instrução. Como a instrução não é branch nem jump ele soma PC + 4.
 
-![image.png](./images/image%203.png)
+![image.png](image%203.png)
 
 #### Segunda instrução
 
@@ -289,7 +289,7 @@ PC depois prepara para próxima instrução. Como a instrução não é branch n
 - **addi x2, x0, B**
 - PC incrementou PC + 4. Para pegar essa próxima instrução.
 
-![image.png](./images/image%204.png)
+![image.png](image%204.png)
 
 #### Terceira a oitava instrução (operações com ALU)
 
@@ -302,12 +302,12 @@ PC depois prepara para próxima instrução. Como a instrução não é branch n
 - alu_result = …0110110 = 54.
 - 26 + 28 = 54.
 
-![image.png](./images/image%205.png)
+![image.png](image%205.png)
 
 - depois temos a subtração.
 - func7 0100000, func3 000, opcode padrão de operação aritimética e lógica.
 
-![image.png](./images/image%206.png)
+![image.png](image%206.png)
 
 - Na quinta instrução temos a operação AND
 - func3 = 111 opcode = 0110011.
@@ -318,18 +318,18 @@ data2 = …11010
 ——————-
 alu_result = …11000
 
-![image.png](./images/image%207.png)
+![image.png](image%207.png)
 
 - Próxima instrução operação OR
 - opcode = 0110011 | func3 = 110 | fun7 0000000
 
-![image.png](./images/image%208.png)
+![image.png](image%208.png)
 
 - Depois temos a operação XOR.
 - opcode = 0110011 | func3 = 100 | func7 = 0000000.
 - PC continua pegando a próxima instrução (+4).
 
-![image.png](./images/image%209.png)
+![image.png](image%209.png)
 
 - Agora temos a instrução slt
 - funct3 = 010 opcode = 0110011
@@ -341,13 +341,13 @@ senão, x8 = 0
 
 - vejamos. X1 = 28, X2 = 26. Portanto x2 < x1 ? Sim é verdade. então rd(8) = 01000 irá receber 1. Alu_result = 1 exatamente, e write_back_data veja rd x8 = 1.
 
-![image.png](./images/image%2010.png)
+![image.png](image%2010.png)
 
 #### Nona instrução
 
 Agora vamos para nona instrução (store)
 
-![image.png](./images/image%2011.png)
+![image.png](image%2011.png)
 
 - Nona instrução 06302023 (store) significa:
     - sw x3, MEM_ADDR(x0) # armazenar x3 na memória.
@@ -361,7 +361,7 @@ Agora vamos para nona instrução (store)
 
 Como a memória é indexada por palavra nesse projeto memória[96 >> 2] = memória[24] = 54.
 
-![image.png](./images/image%2012.png)
+![image.png](image%2012.png)
 
 #### Décima instrução
 
@@ -380,7 +380,7 @@ Ou seja, conseguimos gravar e ler na memória. Perfeito.
 
 #### Décima primeira instrução
 
-![image.png](./images/image%2013.png)
+![image.png](image%2013.png)
 
 - 00348463 significa.
 - opcode = 1100011 (branch) func3 = 000 (beq). Teste de igualdade.
@@ -391,7 +391,7 @@ x9 = 54 e x3 = 54 devido as intruções anteriores.
 - rs2 = 00011 x3.
 - branch_taken = 1. Porque são iguais.
 
-![image.png](./images/image%2014.png)
+![image.png](image%2014.png)
 
 #### Décima segunda/terceira instrução
 
@@ -411,13 +411,13 @@ x10 = 1
 - rd = 01010 (x10) destino.
 - imm = 000000000001 (1)
 
-![image.png](./images/image%2015.png)
+![image.png](image%2015.png)
 
-![image.png](./images/image%2016.png)
+![image.png](image%2016.png)
 
 #### Décima quarta instrução
 
-![image.png](./images/image%2017.png)
+![image.png](image%2017.png)
 
 008005ef significa:
 
@@ -428,13 +428,13 @@ jal x11, fim. Salta para outro endereço e salva PC + 4 em um registrador.
 
  
 
-![image.png](./images/image%2018.png)
+![image.png](image%2018.png)
 
-![image.png](./images/image%2019.png)
+![image.png](image%2019.png)
 
 #### Décima quinta/sexta instrução
 
-![image.png](./images/image%2017.png)
+![image.png](image%2017.png)
 
 Como a instrução jal funcionou esta instrução addi x12, x0, 99 é pulada. E vamos para o fim. a última instrução 06000693.
 
@@ -447,13 +447,13 @@ Significa addi x13, x0, C.
 - veja write_back_data = 96. Ou seja 4 * N = 96 Pois N = 24. Escrevi 96 o valor de C no registrador X13.
 - E fim. acabou.
 
-![image.png](./images/image%2020.png)
+![image.png](image%2020.png)
 
 Para fechar tudo a última instrução é NOP
 
 - x0 = x0 + 0 por padrão x0 é zero então nao muda nada. e PC continua contando porque ainda tem ciclo de clock e reset = 0.
 
-![image.png](./images/image%2021.png)
+![image.png](image%2021.png)
 
 Referência principal:
 
