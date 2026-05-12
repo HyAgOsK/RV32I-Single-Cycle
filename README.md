@@ -1,5 +1,7 @@
 # Relatório Ténico RV32I Single-Cycle
 
+> este relatório está público no [NOTION](https://tree-pyramid-e24.notion.site/Relat-rio-T-nico-RV32I-Single-Cycle-35beee1c1c76807eada8cc9ee63b7da5?pvs=74)
+
 <aside>
 
 Feito por: Hyago Vieira Lemes Barbosa Silva
