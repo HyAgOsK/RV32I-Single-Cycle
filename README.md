@@ -84,7 +84,7 @@ Seguindo exatamente conforme o definido pelo projeto
 
 ## Execução da simulação
 
-Usando ModellSIM. O testbench gera o arquivo de waveform:
+Usando ModelSim. O testbench gera o arquivo de waveform:
 
 ## O que observar na waveform
 
@@ -143,7 +143,7 @@ assign funct7 = instruction[31:25];
 
 A instrução 01c00093 em binário é 00000001110000000000000010010011. Onde:
 
-- **opcode** = **0010011** instrução **tipo i aritimética.**
+- **opcode** = **0010011** instrução **tipo i aritmética.**
 - **rd** = **00001** (destino **x1**).
 - **func3** = **000** operação addi.
 - **rs1** = **00000** origem x0 valor 0 em decimal por padrão RiscV
@@ -151,7 +151,7 @@ A instrução 01c00093 em binário é 00000001110000000000000010010011. Onde:
 - Quando alu_src = 1, a ALU ignora o valor de rs2 e usa o imediato.
 - **01c00093**  =  **addi x1, x0, 28** ou seja nessa linha o processador faz, **x1 = 0 + 28**.
     - Como o registrador **x0** no **RISC-V** **sempre vale zero**.
-- **Armazenando** o valor de **A = N + 2 = 24 + 2 = 28** no registrador **X1, rd = 00001 (x1)**.
+- **Armazenando** o valor de **A = N + 2 = 24 + 4 = 28** no registrador **X1, rd = 00001 (x1)**.
 - Justamente aquela operação:
     - **addi x1(rd), x0(rs1), A(imm). # X1 = A**
 
@@ -180,7 +180,7 @@ end
 
 - reg_write = 1 vai escrever em x1 (rd) destino.
 - alu_src = 1 vai usar o imediato
-- alu_op = 10 operação aritimética ou lógica
+- alu_op = 10 operação aritmética ou lógica
 
 - **Register File lê o x0.** Agora o banco de registradores recebe:
 
@@ -274,7 +274,7 @@ PC depois prepara para próxima instrução. Como a instrução não é branch n
 ![image.png](./images/image%205.png)
 
 - depois temos a subtração.
-- func7 0100000, func3 000, opcode padrão de operação aritimética e lógica.
+- func7 0100000, func3 000, opcode padrão de operação aritmética e lógica.
 
 ![image.png](./images/image%206.png)
 
@@ -364,14 +364,14 @@ x9 = 54 e x3 = 54 devido as intruções anteriores.
 
 #### Décima segunda/terceira instrução
 
-Instrução pulou da 12° 00000513 para 13° 00100513. Porque a branch ocorreu e deu tudo certo, então não passou para essa intrução. Foi direto para 13°.
+Instrução pulou da 12° 00000513 para 13° 00100513. Porque a branch ocorreu e deu tudo certo, então não passou para essa instrução. Foi direto para 13°.
 
 Veja PC incrementou de 8 ao invés de 4. Justamente.
 
-Como label_ok ficou no registrador x9. Aqui essa instrução 00100513. Significa:
+Como o branch foi tomado, o PC saltou para o rótulo label_ok. Aqui essa instrução 00100513. Significa:
 
 - opcode = 0010011 (tipo i) func3 000 (addi)
-- addi x10, x0, 1. Porque label_ok é true. A branch ocorrou corretamente. Essa operação significa que vou escrever no registrador x10 o valor de 1.
+- addi x10, x0, 1. Porque label_ok é true. A branch ocorreu corretamente. Essa operação significa que vou escrever no registrador x10 o valor de 1.
 
 x10 = 0 + 1
 x10 = 1
