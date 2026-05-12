@@ -456,4 +456,4 @@ rv32i_single_cycle/
 
 ## Link do repositório
 
-github: https://github.com/HyAgOsK/Relat-rio-T-nico-RV32I-Single-Cycle
+github: https://github.com/HyAgOsK/RV32I-Single-Cycle
