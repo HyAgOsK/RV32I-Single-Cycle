@@ -450,8 +450,11 @@ rv32i_single_cycle/
 ├── mem/
 │   └── program.mem
 │
-└── docs/
-    └── relatorio.pdf
+├── docs/
+│   └── Hyago-Relatório_Ténico_RV32I_Single-Cycle.pdf
+│   └── schematic.pdf
+└── images/
+    └── (all prints simulations)
 ```
 
 ## Link do repositório
