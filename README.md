@@ -430,7 +430,7 @@ https://docs.riscv.org/reference/isa/unpriv/rv-32-64g.html
 
 # Estrutura do Projeto e código
 
-```verilog
+```PlainText
 rv32i_single_cycle/
 ├── src/
 │   ├── pc.v
@@ -453,8 +453,9 @@ rv32i_single_cycle/
 ├── docs/
 │   └── Hyago-Relatório_Ténico_RV32I_Single-Cycle.pdf
 │   └── schematic.pdf
-└── images/
-    └── (all prints simulations)
+├── images/
+│   └── (all prints simulations)
+└── README.md
 ```
 
 ## Link do repositório
